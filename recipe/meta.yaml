@@ -1,5 +1,5 @@
 {% set name = "tstoolbox" %}
-{% set version = "108.1.1" %}
+{% set version = "108.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tstoolbox-{{ version }}.tar.gz
-  sha256: 64b0b83b46cdc922b4d0f526454b62bc05a96c30ab7c64c01d4e42338162a707
+  sha256: e5ba0e790017468b7db09b105390ab2fbc8709125de811d2091ed51af39c42bb
 
 build:
   entry_points:
