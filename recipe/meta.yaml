@@ -27,21 +27,23 @@ requirements:
     - python >=3.8
     - cltoolbox >=1.0.0
     - dateparser
-    - dill
     - hydroerr
     - numpy
+    - openpyxl
     - pandas
     - pint !=0.21.*
     - pint-pandas
     - plottoolbox >=102.1.1
     - pydantic >=2.0.0
-    - pydot
+    - python-calamine
+    - pyxlsb
     - scikit-learn
     - scipy
-    - six
-    - sqlalchemy
     - statsmodels
     - tabulate
+    - typing_extensions
+    - xlrd
+    - xlsxwriter
 
 test:
   imports:
