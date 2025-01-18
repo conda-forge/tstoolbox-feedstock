@@ -27,7 +27,7 @@ requirements:
     - python >={{ python_min }}
     - cltoolbox >=1.0.0
     - dateparser
-    - numpy
+    - numpy <2
     - pandas
     - pint !=0.21.*
     - pint-pandas
