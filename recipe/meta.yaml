@@ -1,5 +1,6 @@
 {% set name = "tstoolbox" %}
 {% set version = "108.2.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
