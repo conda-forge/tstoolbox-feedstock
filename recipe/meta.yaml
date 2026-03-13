@@ -1,5 +1,6 @@
 {% set name = "tstoolbox" %}
-{% set version = "108.2.1" %}
+{% set version = "108.2.2" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +8,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tstoolbox-{{ version }}.tar.gz
-  sha256: 80c963184033b280f9d01be0ee54f8f1174ba55805246cf018fc50a181d3b863
+  sha256: c94ea2c05a0fb7e531db97080502d1bd068c4167290ecec10d66772de987f355
 
 build:
   entry_points:
     - tstoolbox = tstoolbox.tstoolbox:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -27,11 +28,12 @@ requirements:
     - python >={{ python_min }}
     - cltoolbox >=1.0.0
     - dateparser
-    - numpy <2 # [py<=3.9]
+    - numpy
+    - openpyxl
     - pandas
     - pint !=0.21.*
     - pint-pandas
-    - plottoolbox >=105.1.1
+    - plottoolbox >=105.0.1
     - pydantic >=2.0.0
     - scikit-learn
     - scipy
