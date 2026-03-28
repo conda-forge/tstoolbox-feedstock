@@ -28,6 +28,7 @@ requirements:
     - python >={{ python_min }}
     - cltoolbox >=1.0.0
     - dateparser
+    - hydroerr
     - numpy
     - openpyxl
     - pandas
