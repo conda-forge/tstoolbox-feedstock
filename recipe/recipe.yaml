@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tstoolbox
-  version: "108.2.6"
+  version: "108.2.7"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 039cd05f66e1e0823fe4082af7cd0b5dac3e88bb243bc2fad94ba103685bdf4f
+  sha256: c430af68e2a263ef6c1987305dedd918cfdf73d526bece90523a2832e997492d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -23,9 +23,8 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools >=45
-    - setuptools-scm >=6.2
-    - wheel
+    - setuptools >=80
+    - setuptools-scm >=8
     - pip
   run:
     - python >=${{ python_min }}
