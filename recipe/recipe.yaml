@@ -13,7 +13,7 @@ source:
   sha256: c430af68e2a263ef6c1987305dedd918cfdf73d526bece90523a2832e997492d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -27,21 +27,26 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
-    - python >=${{ python_min }}
+    - python >=3.10
     - cltoolbox >=1.0.0
     - dateparser
     - hydroerr
     - numpy
-    - openpyxl
+    - odfpy >=1.4.1
+    - openpyxl >=3.1.5
     - pandas
     - pint !=0.21
     - pint-pandas
     - plottoolbox >=105.0.1
     - pydantic >=2.0.0
+    - python-calamine >=0.3.0
+    - pyxlsb >=1.0.10
     - scikit-learn
     - scipy
     - statsmodels
     - tabulate
+    - xlrd >=2.0.1
+    - xlsxwriter >=3.2.0
 
 tests:
   - python:
